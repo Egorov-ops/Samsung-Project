@@ -6,13 +6,395 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/TextViewGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/text_padding"
+        android:text="@string/gender"
+        android:textSize="@dimen/standard_text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/GenderRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewGender"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/GenderMaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_padding"
+            android:text="@string/male_gender"
+            android:textSize="@dimen/standard_text_size" />
+
+        <RadioButton
+            android:id="@+id/GenderFemaleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/text_padding"
+            android:text="@string/female_gender"
+            android:textSize="@dimen/standard_text_size" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TextViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/weight"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewGender" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewGender"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/TextViewKilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/kilo"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextWeight"
+        app:layout_constraintTop_toBottomOf="@+id/GenderRadioGroup" />
+
+    <TextView
+        android:id="@+id/TextViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/height"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewWeight" />
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@id/TextViewHeight"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextHeight"
+        app:layout_constraintTop_toTopOf="@+id/TextViewHeight" />
+
+    <TextView
+        android:id="@+id/TextViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/age"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewSm" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@id/TextViewAge"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/years"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextAge"
+        app:layout_constraintTop_toTopOf="@+id/TextViewAge" />
+
+    <TextView
+        android:id="@+id/TextViewNeckGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/neck_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewAge" />
+
+    <EditText
+        android:id="@+id/editTextNeckSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+
+        android:padding="@dimen/text_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@+id/TextViewNeckGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewNeckSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toTopOf="@+id/TextViewNeckGirth" />
+
+    <TextView
+        android:id="@+id/TextViewWaistGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/waist_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewNeckGirth" />
+
+    <EditText
+        android:id="@+id/editTextWaistSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@id/TextViewWaistGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewWaistSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toTopOf="@+id/TextViewWaistGirth" />
+
+    <TextView
+        android:id="@+id/TextViewForearmGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/forearm_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewWaistGirth" />
+
+    <EditText
+        android:id="@+id/editTextForearmSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_style"
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+
+        app:layout_constraintBottom_toTopOf="@+id/editTextWristSm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@+id/TextViewForearmGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewForearmSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewWristSm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewWaistGirth" />
+
+    <TextView
+        android:id="@+id/TextViewWristGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/wrist_grith"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewForearmGirth" />
+
+    <EditText
+        android:id="@+id/editTextWristSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:padding="@dimen/text_padding"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewForearmGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewWristSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toTopOf="@+id/TextViewWristGirth" />
+
+    <TextView
+        android:id="@+id/TextViewHipsGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/hips_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewWristGirth" />
+
+    <EditText
+        android:id="@+id/editTextHipsSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:inputType="number"
+        android:padding="@dimen/text_padding"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewHipsSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth" />
+
+    <TextView
+        android:id="@+id/TextViewHipGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/hip_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewWristGirth" />
+
+    <EditText
+        android:id="@+id/editTextHipSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:inputType="number"
+        android:padding="@dimen/text_padding"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewHipSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth" />
+
+    <TextView
+        android:id="@+id/TextViewShinGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/shin_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth" />
+
+    <EditText
+        android:id="@+id/editTextShinSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:inputType="number"
+        android:padding="@dimen/text_padding"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewShinSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
