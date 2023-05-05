@@ -398,6 +398,7 @@
     <Button
         android:layout_width="@dimen/button_size"
         android:layout_height="wrap_content"
+        android:text="@string/calculate_fat_percentage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/TextViewShinSm"
         app:layout_constraintEnd_toEndOf="parent"

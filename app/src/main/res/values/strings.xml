@@ -16,4 +16,5 @@
     <string name="hips_girth">Обхват бёдер</string>
     <string name="hip_girth">Обхват бедра</string>
     <string name="shin_girth">Обхват голени</string>
+    <string name="calculate_fat_percentage">Рассчитать % жира</string>
 </resources>
