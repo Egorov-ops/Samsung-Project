@@ -333,45 +333,10 @@
         android:text="@string/hip_girth"
         android:textSize="@dimen/standard_text_size"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewWristGirth" />
-
-    <EditText
-        android:id="@+id/editTextHipSm"
-        android:layout_width="@dimen/edit_text_size"
-        android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_style"
-        android:inputType="number"
-        android:padding="@dimen/text_padding"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
-        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth"
-        tools:ignore="SpeakableTextPresentCheck" />
-    />
-
-    <TextView
-        android:id="@+id/TextViewHipSm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/text_padding"
-        android:text="@string/sm"
-        android:textSize="@dimen/standard_text_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
-        app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth" />
-
-    <TextView
-        android:id="@+id/TextViewShinGirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/text_padding"
-        android:text="@string/shin_girth"
-        android:textSize="@dimen/standard_text_size"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth" />
 
     <EditText
-        android:id="@+id/editTextShinSm"
+        android:id="@+id/editTextHipSm"
         android:layout_width="@dimen/edit_text_size"
         android:layout_height="wrap_content"
         android:background="@drawable/edit_text_style"
@@ -385,7 +350,7 @@
     />
 
     <TextView
-        android:id="@+id/TextViewShinSm"
+        android:id="@+id/TextViewHipSm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/text_padding"
@@ -394,6 +359,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth" />
+
+    <TextView
+        android:id="@+id/TextViewShinGirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/shin_girth"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipGirth" />
+
+    <EditText
+        android:id="@+id/editTextShinSm"
+        android:layout_width="@dimen/edit_text_size"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_style"
+        android:inputType="number"
+        android:padding="@dimen/text_padding"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipGirth"
+        tools:ignore="SpeakableTextPresentCheck" />
+    />
+
+    <TextView
+        android:id="@+id/TextViewShinSm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:text="@string/sm"
+        android:textSize="@dimen/standard_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewHipGirth" />
+
+    <Button
+        android:layout_width="@dimen/button_size"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewShinSm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 
