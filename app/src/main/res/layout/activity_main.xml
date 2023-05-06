@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <ScrollView
 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     <TextView
         android:id="@+id/TextViewGender"
         android:layout_width="wrap_content"
@@ -32,6 +42,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/text_padding"
             android:text="@string/male_gender"
+
             android:textSize="@dimen/standard_text_size" />
 
         <RadioButton
@@ -40,9 +51,11 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/text_padding"
             android:text="@string/female_gender"
+
             android:textSize="@dimen/standard_text_size" />
 
     </RadioGroup>
+
 
     <TextView
         android:id="@+id/TextViewWeight"
@@ -99,7 +112,7 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@id/TextViewHeight"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
+
 
     <TextView
         android:id="@+id/TextViewSm"
@@ -134,7 +147,6 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@id/TextViewAge"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
 
     <TextView
         android:id="@+id/TextViewYears"
@@ -168,7 +180,6 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@+id/TextViewNeckGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
 
     <TextView
         android:id="@+id/TextViewNeckSm"
@@ -204,7 +215,7 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@id/TextViewWaistGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
+
 
     <TextView
         android:id="@+id/TextViewWaistSm"
@@ -241,7 +252,6 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@+id/TextViewForearmGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
 
     <TextView
         android:id="@+id/TextViewForearmSm"
@@ -277,7 +287,6 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toBottomOf="@+id/TextViewForearmGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
 
     <TextView
         android:id="@+id/TextViewWristSm"
@@ -312,7 +321,7 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toTopOf="@+id/TextViewHipsGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
+
 
     <TextView
         android:id="@+id/TextViewHipsSm"
@@ -331,6 +340,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/text_padding"
         android:text="@string/hip_girth"
+        android:visibility="visible"
         android:textSize="@dimen/standard_text_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth" />
@@ -342,12 +352,12 @@
         android:background="@drawable/edit_text_style"
         android:inputType="number"
         android:padding="@dimen/text_padding"
-
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipsGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
+
 
     <TextView
         android:id="@+id/TextViewHipSm"
@@ -355,6 +365,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/text_padding"
         android:text="@string/sm"
+        android:visibility="visible"
         android:textSize="@dimen/standard_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextNeckSm"
@@ -382,7 +393,7 @@
         app:layout_constraintStart_toEndOf="@+id/TextViewWeight"
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipGirth"
         tools:ignore="SpeakableTextPresentCheck" />
-    />
+
 
     <TextView
         android:id="@+id/TextViewShinSm"
@@ -396,6 +407,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextViewHipGirth" />
 
     <Button
+        android:id="@+id/ButtonCalculate"
         android:layout_width="@dimen/button_size"
         android:layout_height="wrap_content"
         android:text="@string/calculate_fat_percentage"
@@ -403,6 +415,11 @@
         app:layout_constraintTop_toBottomOf="@id/TextViewShinSm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
 
 
 
