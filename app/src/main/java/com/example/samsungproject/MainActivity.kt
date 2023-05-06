@@ -29,9 +29,12 @@ class MainActivity : AppCompatActivity() {
                 && binding.editTextNeckSm.text.isNotEmpty() && binding.editTextWaistSm.text.isNotEmpty()
             ) {
                 calculateNavyImt()
+            }else if (binding.editTextWeight.text.isNotEmpty()&&binding.editTextWaistSm.text.isNotEmpty()){
+                calculateYmcaImt()
             }
             Log.v(TAG, "IMT" + calculateImt())
             Log.v(TAG, "IMTNavy" + calculateNavyImt())
+            Log.v(TAG, "IMTYmca" + calculateYmcaImt())
 
 
         }
@@ -82,14 +85,12 @@ class MainActivity : AppCompatActivity() {
         var imt: Double = 0.0
         val id: Int = binding.GenderRadioGroup.checkedRadioButtonId
         if (id == binding.GenderMaleButton.id) {
-            val weight: Double = binding.editTextWeight.text.toString().toDouble()
             val height: Double = binding.editTextHeight.text.toString().toDouble()
             val neck: Double = binding.editTextNeckSm.text.toString().toDouble()
             val waist: Double = binding.editTextWaistSm.text.toString().toDouble()
             imt = 495.0 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
 
         } else if (id == binding.GenderFemaleButton.id && binding.editTextHipSm.text.isNotEmpty()) {
-            val weight: Double = binding.editTextWeight.text.toString().toDouble()
             val height: Double = binding.editTextHeight.text.toString().toDouble()
             val neck: Double = binding.editTextNeckSm.text.toString().toDouble()
             val waist: Double = binding.editTextWaistSm.text.toString().toDouble()
@@ -102,5 +103,27 @@ class MainActivity : AppCompatActivity() {
 
         return imt
     }
+
+    private fun calculateYmcaImt(): Double {
+        var imt: Double = 0.0
+        val id: Int = binding.GenderRadioGroup.checkedRadioButtonId
+        if (id == binding.GenderMaleButton.id) {
+            val weight: Double = binding.editTextWeight.text.toString().toDouble()
+            val waist: Double = binding.editTextWaistSm.text.toString().toDouble()
+            imt =
+                (-98.42 + (4.15 * waist / 2.54) - (0.082 * (weight / 0.454))) / (weight / 0.454) * 100
+
+        } else if (id == binding.GenderFemaleButton.id && binding.editTextHipSm.text.isNotEmpty()) {
+            val weight: Double = binding.editTextWeight.text.toString().toDouble()
+            val waist: Double = binding.editTextWaistSm.text.toString().toDouble()
+            imt =
+                (-76.76 + (4.15 * waist / 2.54) - (0.082 * (weight / 0.454))) / (weight / 0.454) * 100
+
+        }
+
+
+        return imt
+    }
 }
+
 
